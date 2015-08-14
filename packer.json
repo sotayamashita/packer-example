@@ -37,6 +37,22 @@
       ]
     }
   ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "scripts": [
+        "base.sh",
+        "vagrant.sh",
+        "virtualbox.sh",
+        "clean.sh"
+      ],
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+        }
+      }
+    }
+  ],
   "post-processors": [
     {
       "type": "vagrant",

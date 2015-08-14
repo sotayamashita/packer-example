@@ -1,0 +1,44 @@
+{
+	"variables": {
+		"iso_checksum": "7540ace2d6cdee264432f5ed987236d32edef798",
+		"iso_name": "ubuntu-12.04.5-server-amd64.iso",
+		"iso_path": "iso",
+		"iso_url": "http://releases.ubuntu.com/14.04/ubuntu-14.04.2-server-amd64.iso",
+		"hostname": "vagrant",
+    "ssh_fullname": "vagrant",
+    "ssh_password": "vagrant",
+    "ssh_username": "vagrant",
+    "update": "false",
+    "version": "0.0.1"
+	},
+	"builders": [{
+		"iso_checksum": "{{ user `iso_checksum` }}",
+    "iso_checksum_type": "sha1",
+    "iso_urls": [
+      "{{ user `iso_path` }}/{{ user `iso_name` }}",
+      "{{ user `iso_url` }}"
+    ],
+    "shutdown_command": "echo '{{ user `ssh_password` }}'|sudo -S shutdown -P now",
+    "ssh_password": "{{ user `ssh_password` }}",
+    "ssh_username": "{{ user `ssh_username` }}",
+    "ssh_wait_timeout": "10000s",
+    "type": "virtualbox-iso",
+    "virtualbox_version_file": ".vbox_version",
+    "vm_name": "ubuntu1204-docker"
+	}],
+	"post-processors": [
+    {
+      "output": "vagrant/ubuntu-14.04.box",
+      "type": "vagrant"
+    }
+  ],
+	"provisioners": [{
+		"type": "shell",
+		"inline": [
+			"sleep 30",
+			"sudo apt-get update",
+			"sudo apt-get install -y git",
+			"sudo apt-get install -y maven"
+		]
+	}]
+}

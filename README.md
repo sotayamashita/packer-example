@@ -52,6 +52,11 @@ mount: unknown filesystem type 'vboxsf'
 
 Please see http://zow.hatenablog.com/entry/20150116/1421336024
 
+## References
+
+* [Packer](http://packer.io) - Official Packer page
+* [Boxcutter](https://github.com/boxcutter) - Community-driven templates and tools for creating cloud, virtual machines, containers and metal operating system environments
+
 ## Contirbuting
 
 Contributions are very welcome! Please have a look at [CONTRIBUTING](CONTIRBUTING.md) for guidelines.

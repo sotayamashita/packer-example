@@ -20,12 +20,13 @@ These setups are typically for the purposes of internal testing and demonstratio
 **Build Vagrant Box**
 
 ```bash
-$ packer build --only=virtualbox-iso packer.json
+$ packer build --only=virtualbox-iso template.json
 ```
 
 ## Inspect
 
 ```
+$ packer inspect template.json
 Optional variables and their defaults:
 
   iso_checksum      = d07ab3e615c66a8b2e9a50f4852e6a77

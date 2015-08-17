@@ -56,7 +56,7 @@ Provisioners:
 
 ## Stackoverflow
 
-**1\. Error mount: unknown filesystem type 'vboxsf'**
+**1\. Error mount: unknown filesystem type 'vboxsf' when `vagrant up`**
 
 ```
 default: /vagrant => /path/to/foo.box
@@ -75,9 +75,9 @@ mount: unknown filesystem type 'vboxsf'
 
 ↓
 
-Please see http://zow.hatenablog.com/entry/20150116/1421336024
+Please see http://zow.hatenablog.com/entry/20150116/1421336024 . _Note: it is written in Japanese._
 
-**2\. Error downloading: checksums didn't match expected**
+**2\. Error downloading: checksums didn't match expected when `packer build`**
 
 ```
 ==> virtualbox-iso: Downloading or copying ISO

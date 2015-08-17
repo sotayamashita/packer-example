@@ -57,6 +57,13 @@ Please see http://zow.hatenablog.com/entry/20150116/1421336024
 * [Packer](http://packer.io) - Official Packer page
 * [Boxcutter](https://github.com/boxcutter) - Community-driven templates and tools for creating cloud, virtual machines, containers and metal operating system environments
 
+## Acknowledgements
+
+Inspiration and code was taken from many sources, including:
+
+* [hashicorp/atlas-packer-vagrant-tutorial](https://github.com/hashicorp/atlas-packer-vagrant-tutorial)
+* [boxcutter/centos](https://github.com/boxcutter/centos)
+
 ## Contirbuting
 
 Contributions are very welcome! Please have a look at [CONTRIBUTING](CONTIRBUTING.md) for guidelines.

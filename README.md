@@ -1,8 +1,32 @@
-Build Vagrant Box:
+# Packer Example
+
+:mortar_board:  Example - The goal of these packer builds is to create consistent Vagrant boxes across multiple vagrant providers, specifically for Ansible vagrant usage. Currently only Virtualbox.
+
+These setups are typically for the purposes of internal testing and demonstration purposes and don't necessarily reflect recommended production settings.
+
+## Setup
+
+**Required software**
+
+* Packer 0.8.5:http://packer.io
+* Vagrant 1.7.4: https://www.vagrantup.com/
+* Virtual Box 5.0.2: https://www.virtualbox.org/
+
+## Building
+
+**Build Vagrant Box**
 
 ```bash
 $ packer build --only=virtualbox-iso packer.json
 ```
+
+## Linux distribution
+
+* CentOS 7
+
+## Providers
+
+* Virtual Box
 
 ## Stackoverflow
 

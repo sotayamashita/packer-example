@@ -1,4 +1,14 @@
 {
+  "variables": {
+  	"iso_name": "CentOS-7-x86_64-Minimal-1503-01",
+    "iso_checksum_type": "md5",
+    "iso_checksum": "d07ab3e615c66a8b2e9a50f4852e6a77",
+    "iso_url": "http://ftp.riken.jp/Linux/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso",
+    "ssh_password": "vagrant",
+    "ssh_username": "vagrant",
+    "cm_version": "",
+    "version": "0.1.0"
+  },
   "builders": [
     {
       "type": "virtualbox-iso",
@@ -6,17 +16,16 @@
       "boot_wait": "10s",
       "disk_size": 512000,
       "guest_os_type": "RedHat_64",
-      "iso_checksum": "d07ab3e615c66a8b2e9a50f4852e6a77",
-      "iso_checksum_type": "md5",
-      "iso_url": "http://ftp.riken.jp/Linux/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso",
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
+      "iso_checksum": "{{ user `iso_checksum` }}",
+      "iso_checksum_type": "{{ user `iso_checksum_type` }}",
+      "iso_url": "{{ user `iso_url` }}",
+      "ssh_password": "{{ user `ssh_password` }}",
+      "ssh_username": "{{ user `ssh_username` }}",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
-      "ssh_pty" : "true",
       "vboxmanage": [
         [
           "modifyvm",
@@ -56,7 +65,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "./packer/vagrant-boxes/CentOS-7-x86_64-Minimal.box"
+      "output": "./box/{{.Provider}}/{{user `iso_name`}}-{{user `version`}}.box"
     }
   ]
 }

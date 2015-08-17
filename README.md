@@ -56,6 +56,7 @@ Please see http://zow.hatenablog.com/entry/20150116/1421336024
 
 * [Packer](http://packer.io) - Official Packer page
 * [Boxcutter](https://github.com/boxcutter) - Community-driven templates and tools for creating cloud, virtual machines, containers and metal operating system environments
+* [packer-templates](https://github.com/shiguredo/packer-templates) - Packer templates
 
 ## Acknowledgements
 

@@ -5,7 +5,6 @@ if [[ `facter virtual` != "virtualbox" ]]; then
     exit 0
 fi
 
-
 # Installing the virtualbox guest additions
 mkdir -p /mnt/virtualbox
 mount -o loop /home/vagrant/VBoxGuest*.iso /mnt/virtualbox

@@ -23,6 +23,28 @@ These setups are typically for the purposes of internal testing and demonstratio
 $ packer build --only=virtualbox-iso packer.json
 ```
 
+## Inspect
+
+```
+Optional variables and their defaults:
+
+  iso_checksum      = d07ab3e615c66a8b2e9a50f4852e6a77
+  iso_checksum_type = md5
+  iso_name          = CentOS-7-x86_64-Minimal-1503-01
+  iso_url           = http://ftp.riken.jp/Linux/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso
+  ssh_password      = vagrant
+  ssh_username      = vagrant
+  version           = 0.1.0
+
+Builders:
+
+  virtualbox-iso
+
+Provisioners:
+
+  shell
+```
+
 ## Linux distribution
 
 * CentOS 7

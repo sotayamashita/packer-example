@@ -4,6 +4,10 @@
 
 These setups are typically for the purposes of internal testing and demonstration purposes and don't necessarily reflect recommended production settings.
 
+<p align="center">
+<img src="https://dl.dropboxusercontent.com/u/74344418/github-image/packer.png" width="400px">
+</p>
+
 ## Setup
 
 **Required software**

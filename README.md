@@ -11,9 +11,9 @@ These setups are typically for the purposes of internal testing and demonstratio
 
 **Required software**
 
-* Packer 0.8.5:http://packer.io
-* Vagrant 1.7.4: https://www.vagrantup.com/
-* Virtual Box 5.0.2: https://www.virtualbox.org/
+* Packer (>=0.8.5) : http://packer.io
+* Vagrant (>=1.7.4) : https://www.vagrantup.com/
+* Virtual Box (>=5.0.2) : https://www.virtualbox.org/
 
 ## Building
 

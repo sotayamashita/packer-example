@@ -75,7 +75,30 @@ mount: unknown filesystem type 'vboxsf'
 
 ↓
 
+Donwload a `VBoxGuestAdditions_*.iso` of your virtualbox version from http://download.virtualbox.org/virtualbox/ 
+
+```bash
+vagrant@vagrant-ubuntu-trusty:~$ cd /tmp
+# Download VBoxGuestAdditions_*.iso
+vagrant@vagrant-ubuntu-trusty:/tmp$ wget http://download.virtualbox.org/virtualbox/<VERSION>/VBoxGuestAdditions_<VERSION>.iso
+vagrant@vagrant-ubuntu-trusty:/tmp$ ls -l
+total 56976
+-rw-rw-r-- 1 vagrant vagrant 58343424 Nov 21 14:01 VBoxGuestAdditions_<VERSION>.iso
+vagrant@vagrant-ubuntu-trusty:/tmp$ 
+# mount image
+vagrant@vagrant-ubuntu-trusty:/tmp$ sudo mount -t iso9660 /tmp/VBoxGuestAdditions_4.3.20.iso /mnt
+mount: block device /tmp/VBoxGuestAdditions_4.3.20.iso is write-protected, mounting read-only
+vagrant@vagrant-ubuntu-trusty:/tmp$
+vagrant@vagrant-ubuntu-trusty:/tmp$ cd /mnt/
+# Run VBoxLinuxAdditions.run
+vagrant@vagrant-ubuntu-trusty:/mnt$ sudo ./VBoxLinuxAdditions.run 
+# Check there is vboxadd
+vagrant@vagrant-ubuntu-trusty:/mnt$ ls /etc/init.d/
+vagrant@vagrant-ubuntu-trusty:/$ sudo umount /mnt 
+```
+
 Please see http://zow.hatenablog.com/entry/20150116/1421336024 . _Note: it is written in Japanese._
+
 
 **2\. Error downloading: checksums didn't match expected when `packer build`**
 

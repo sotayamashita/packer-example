@@ -1,5 +1,7 @@
 # Packer Example
 
+[![][mit-badge]][mit]
+
 :mortar_board:  Example - The goal of these packer builds is to create consistent Vagrant boxes across multiple vagrant providers, specifically for Ansible vagrant usage. Currently only Virtualbox.
 
 These setups are typically for the purposes of internal testing and demonstration purposes and don't necessarily reflect recommended production settings.
@@ -52,3 +54,7 @@ Please see http://zow.hatenablog.com/entry/20150116/1421336024
 ## License
 
 MIT © Sota Yamashita
+
+[mit]: https://github.com/sotayamashita/packer-example/blob/master/LICENSE.md
+[mit-badge]:      https://img.shields.io/github/license/sotayamashita/bdash.svg?style=flat-square
+[me]:  https://github.com/sotayamashita

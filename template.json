@@ -15,6 +15,7 @@
       "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "{{ user `ssh_password` }}",
       "ssh_port": 22,
+      "ssh_pty": true,
       "ssh_username": "{{ user `ssh_username` }}",
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
@@ -46,7 +47,7 @@
     {
       "override": {
         "virtualbox-iso": {
-          "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'"
+          "execute_command": "echo 'vagrant'|sudo -S bash '{{.Path}}'"
         }
       },
       "scripts": [
@@ -59,7 +60,6 @@
     }
   ],
   "variables": {
-    "cm_version": "",
     "iso_checksum": "d07ab3e615c66a8b2e9a50f4852e6a77",
     "iso_checksum_type": "md5",
     "iso_name": "CentOS-7-x86_64-Minimal-1503-01",

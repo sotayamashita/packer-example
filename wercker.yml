@@ -1,4 +1,4 @@
-box: wercker/ubuntu
+box: wercker/ruby
 build:
   steps:
     - install-packages:

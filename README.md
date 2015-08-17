@@ -17,7 +17,7 @@ These setups are typically for the purposes of internal testing and demonstratio
 
 ## Building
 
-**Build Vagrant Box**
+**Build VirtualBox**
 
 ```bash
 $ packer build --only=virtualbox-iso template.json

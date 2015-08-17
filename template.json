@@ -15,7 +15,6 @@
       "shutdown_command": "echo '/sbin/halt -h -p' > shutdown.sh; echo 'vagrant'|sudo -S sh 'shutdown.sh'",
       "ssh_password": "{{ user `ssh_password` }}",
       "ssh_port": 22,
-      "ssh_pty": true,
       "ssh_username": "{{ user `ssh_username` }}",
       "ssh_wait_timeout": "10000s",
       "type": "virtualbox-iso",
@@ -51,6 +50,7 @@
         }
       },
       "scripts": [
+        "scripts/fix-slow-dns.sh",
         "scripts/base.sh",
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",

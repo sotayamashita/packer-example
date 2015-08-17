@@ -54,7 +54,7 @@ Provisioners:
 
 * Virtual Box
 
-## Stackoverflow
+## Possible problems
 
 **1\. Error mount: unknown filesystem type 'vboxsf' when `vagrant up`**
 

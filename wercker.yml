@@ -6,8 +6,8 @@ build:
     - script:
         name: install packer
         code: |
-          wget https://dl.bintray.com/mitchellh/packer/packer_0.8.5_linux_amd64.zip
-          unzip packer_0.8.5_linux_amd64.zip
+          wget https://dl.bintray.com/mitchellh/packer/#packer_0.8.5_linux_amd64.zip
+          unzip packer_0.8.5_linux_amd64
           ./packer version | tee $WERCKER_REPORT_MESSAGE_FILE
     - script:
         name: validate packer template

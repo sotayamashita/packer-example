@@ -56,7 +56,7 @@ Provisioners:
 
 ## Stackoverflow
 
-If you run `vagrant up` and get a error blow:
+**Error mount: unknown filesystem type 'vboxsf'**
 
 ```
 default: /vagrant => /path/to/foo.box
@@ -73,7 +73,28 @@ The error output from the last command was:
 mount: unknown filesystem type 'vboxsf'
 ```
 
+↓
+
 Please see http://zow.hatenablog.com/entry/20150116/1421336024
+
+**Error downloading: checksums didn't match expected**
+
+```
+==> virtualbox-iso: Downloading or copying ISO
+    virtualbox-iso: Downloading or copying: http://ftp.riken.jp/Linux/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso
+    virtualbox-iso: Error downloading: checksums didn't match expected: d07ab3e615c66a8b2e9a50f4852e6a76
+==> virtualbox-iso: ISO download failed.
+Build 'virtualbox-iso' errored: ISO download failed.
+```
+
+↓
+
+Run:
+
+```bash
+$ md5 CentOS-7-x86_64-Minimal-1503-01.iso
+MD5 (CentOS-7-x86_64-Minimal-1503-01.iso) = d07ab3e615c66a8b2e9a50f4852e6a77
+```
 
 ## References
 

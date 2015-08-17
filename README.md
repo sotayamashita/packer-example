@@ -100,7 +100,7 @@ MD5 (CentOS-7-x86_64-Minimal-1503-01.iso) = d07ab3e615c66a8b2e9a50f4852e6a77
 
 * [Packer](http://packer.io) - Official Packer page
 * [Boxcutter](https://github.com/boxcutter) - Community-driven templates and tools for creating cloud, virtual machines, containers and metal operating system environments
-* [packer-templates](https://github.com/shiguredo/packer-templates) - Packer templates
+
 
 ## Acknowledgements
 
@@ -108,6 +108,7 @@ Inspiration and code was taken from many sources, including:
 
 * [hashicorp/atlas-packer-vagrant-tutorial](https://github.com/hashicorp/atlas-packer-vagrant-tutorial)
 * [boxcutter/centos](https://github.com/boxcutter/centos)
+* [shiguredo/packer-templates](https://github.com/shiguredo/packer-templates)
 
 ## Contirbuting
 

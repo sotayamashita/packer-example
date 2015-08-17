@@ -52,9 +52,13 @@ mount: unknown filesystem type 'vboxsf'
 
 Please see http://zow.hatenablog.com/entry/20150116/1421336024
 
+## Contirbuting
+
+Contributions are very welcome! Please have a look at [CONTRIBUTING](CONTIRBUTING.md) for guidelines.
+
 ## License
 
-MIT © Sota Yamashita
+[MIT][mit] © [Sota Yamashita][me]
 
 [example]:        https://github.com/search?utf8=%E2%9C%93&q=example%2Buser%3Asotayamashita&type=Repositories&ref=searchresults
 [example-badge]:  https://img.shields.io/badge/for-example-orange.svg?style=flat-square

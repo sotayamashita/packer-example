@@ -1,7 +1,15 @@
+#!/bin/bash
+
+# Bail if we are not running inside VirtualBox.
+if [[ `facter virtual` != "virtualbox" ]]; then
+    exit 0
+fi
+
+
 # Installing the virtualbox guest additions
-VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
-cd /tmp
-mount -o loop /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
-sh /mnt/VBoxLinuxAdditions.run
-umount /mnt
-rm -rf /home/vagrant/VBoxGuestAdditions_*.iso
+mkdir -p /mnt/virtualbox
+mount -o loop /home/vagrant/VBoxGuest*.iso /mnt/virtualbox
+sh /mnt/virtualbox/VBoxLinuxAdditions.run
+ln -s /opt/VBoxGuestAdditions-*/lib/VBoxGuestAdditions /usr/lib/VBoxGuestAdditions
+umount /mnt/virtualbox
+rm -rf /home/vagrant/VBoxGuest*.iso

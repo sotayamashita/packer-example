@@ -51,10 +51,10 @@
         }
       },
       "scripts": [
-        "script/base.sh",
-        "script/vagrant.sh",
-        "script/virtualbox.sh",
-        "script/clean.sh"
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/virtualbox.sh",
+        "scripts/clean.sh"
       ],
       "type": "shell"
     }

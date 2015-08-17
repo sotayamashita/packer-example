@@ -1,4 +1,4 @@
-box: centos
+box: wercker/default
 build:
   steps:
     - install-packages:

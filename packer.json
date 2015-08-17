@@ -31,7 +31,7 @@
           "2"
         ]
       ],
-      "http_directory": "./",
+      "http_directory": "http",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ]
@@ -41,10 +41,10 @@
     {
       "type": "shell",
       "scripts": [
-        "base.sh",
-        "vagrant.sh",
-        "virtualbox.sh",
-        "clean.sh"
+        "script/base.sh",
+        "script/vagrant.sh",
+        "script/virtualbox.sh",
+        "script/clean.sh"
       ],
       "override": {
         "virtualbox-iso": {

@@ -1,0 +1,19 @@
+box: centos
+build:
+  steps:
+    - install-packages:
+        packages: wget unzip
+    - script:
+        name: install packer
+        code: |
+          wget https://dl.bintray.com/mitchellh/packer/0.5.2_linux_amd64.zip
+          unzip 0.5.2_linux_amd64.zip
+          ./packer version | tee $WERCKER_REPORT_MESSAGE_FILE
+    - script:
+        name: validate packer template
+        code: ./packer validate template.json | tee $WERCKER_REPORT_MESSAGE_FILE
+    - script:
+        name: build image
+        code: |
+          ./packer build template.json | tee "${WERCKER_REPORT_ARTIFACTS_DIR}/packer_build_output.log"
+          tail -n 1 "${WERCKER_REPORT_ARTIFACTS_DIR}/packer_build_output.log" | tee $WERCKER_REPORT_MESSAGE_FILE

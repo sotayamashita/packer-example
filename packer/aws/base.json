@@ -18,7 +18,7 @@
       "ssh_username":     "{{user `ssh_username`}}",
       "ssh_timeout":      "10m",
       "ami_name":         "{{user ``}} {{timestamp}}",
-      "ami_description" : "{{user ``}} AMI",
+      "ami_description":  "{{user ``}} AMI",
       "run_tags":         { "ami-create": "{{user ``}}" },
       "tags":             { "ami": "{{user ``}}"},
       "ssh_private_ip":   false,

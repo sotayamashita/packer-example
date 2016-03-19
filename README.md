@@ -27,12 +27,6 @@ $ packer build template.json
 $ packer build --only=virtualbox-iso template.json
 ```
 
-**Build EBS-backed AMI**
-
-```javascript
-$ packer build --only=amazon-ebs template.json
-```
-
 
 ## Usage
 

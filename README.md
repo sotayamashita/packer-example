@@ -1,6 +1,6 @@
 # Packer Example
 
-This repository is typically for the purposes of internal testing and demonstration based on [hashicorp/best-practices](https://github.com/hashicorp/best-practices) but I'm keenly aware people are using it for theirs so You're always welcome to make suggestions, however I may decline if it's not of personal value to me :smile:
+This repository is typically for the purposes of internal testing and demonstration based on [hashicorp/best-practices](https://github.com/hashicorp/best-practices) to build Amazon EC2 (AMI), Docker and VirtualBox but I'm keenly aware people are using it for theirs so You're always welcome to make suggestions, however I may decline if it's not of personal value to me :smile:
 
 
 ## Setup
@@ -21,10 +21,22 @@ This repository is typically for the purposes of internal testing and demonstrat
 $ packer build template.json
 ```
 
+**Build AWS**
+
+```javascript
+$ packer build --only= ./packer/aws/base.json
+```
+
+**Build Docker**
+
+```javascript
+$ packer build --only= ./packer/docker/base.json
+```
+
 **Build VirtualBox**
 
 ```javascript
-$ packer build --only=virtualbox-iso template.json
+$ packer build --only=virtualbox-iso ./packer/vagrant/base.json
 ```
 
 
@@ -47,7 +59,9 @@ $ vagrant up
 
 ## Providers
 
-* Virtual Box
+* [ ] Amazon EC2 (AMI)
+* [ ] Docker
+* [ ] VirtualBox
 
 
 ## License

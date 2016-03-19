@@ -1,0 +1,28 @@
+{
+  "variables": {
+    "aws_access_key":     "{{env `AWS_ACCESS_KEY_ID`}}",
+    "aws_secret_key":     "{{env `AWS_SECRET_ACCESS_KEY`}}",
+    "aws_region"       :  "ap-northeast-1",
+    "aws_instance_type":  "t2.micro",
+    "name":               "aws-centos-base",
+    "dns_listen_addr":    "127.0.0.1"
+  },
+  "builders": [
+    {
+      "name":             "aws-{{user `aws_region`}}",
+      "type":             "amazon-ebs",
+      "access_key":       "{{user `aws_access_key`}}",
+      "secret_key":       "{{user `aws_secret_key`}}",
+      "region":           "{{user `aws_region`}}",
+      "instance_type":    "{{user `aws_instance_type`}}",
+      "ssh_username":     "{{user `ssh_username`}}",
+      "ssh_timeout":      "10m",
+      "ami_name":         "{{user ``}} {{timestamp}}",
+      "ami_description" : "{{user ``}} AMI",
+      "run_tags":         { "ami-create": "{{user ``}}" },
+      "tags":             { "ami": "{{user ``}}"},
+      "ssh_private_ip":   false,
+      "associate_public_ip_address": true
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-# Packer Example
+# Packer Basic Configuration
 
 This repository is typically for the purposes of internal testing and demonstration based on [hashicorp/best-practices](https://github.com/hashicorp/best-practices) to build Amazon EC2 (AMI), Docker and VirtualBox but I'm keenly aware people are using it for theirs so You're always welcome to make suggestions, however I may decline if it's not of personal value to me :smile:
 

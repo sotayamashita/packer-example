@@ -14,13 +14,6 @@ This repository is typically for the purposes of internal testing and demonstrat
 
 ## Building
 
-**Build all**
-
-```javascript
-$ cd packer
-$ packer build template.json
-```
-
 **Build AWS**
 
 ```javascript
@@ -54,9 +47,10 @@ $ vagrant box add <box name> /path/to/~.box
 $ vagrant up
 ```
 
+
 ## Release
 
-Run `release` script. It will create all macine images and you can also specify what builder you release to add parameter:
+Run `release` script:
 
 ```javascript
 $ ./utils/release.sh
@@ -72,7 +66,7 @@ $ ./utils/release.sh
 
 * [ ] Amazon EC2 (AMI)
 * [ ] Docker
-* [ ] VirtualBox
+* [x] VirtualBox
 
 
 ## License

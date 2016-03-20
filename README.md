@@ -54,6 +54,14 @@ $ vagrant box add <box name> /path/to/~.box
 $ vagrant up
 ```
 
+## Release
+
+Run `release` script. It will create all macine images and you can also specify what builder you release to add parameter:
+
+```javascript
+$ ./utils/release.sh
+```
+
 
 ## Linux distribution
 

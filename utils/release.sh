@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 # Detect vagrant
 if type packer >/dev/null 2>&1; then
   PACKER_VERSION=`packer version | sed 's/[^0-9.]*\([0-9.]*\).*/\1/'`

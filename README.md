@@ -10,7 +10,6 @@ This repository is typically for the purposes of internal testing and demonstrat
 * Packer (>=0.8.5) : http://packer.io
 * Vagrant (>=1.7.4) : https://www.vagrantup.com/
 * Virtual Box (>=5.0.2) : https://www.virtualbox.org/
-* Ansible (>=1.9.2) : http://www.ansible.com/home
 
 
 ## Building
@@ -18,25 +17,29 @@ This repository is typically for the purposes of internal testing and demonstrat
 **Build all**
 
 ```javascript
+$ cd packer
 $ packer build template.json
 ```
 
 **Build AWS**
 
 ```javascript
+$ cd packer
 $ packer build --only= ./packer/aws/base.json
 ```
 
 **Build Docker**
 
 ```javascript
+$ cd packer
 $ packer build --only= ./packer/docker/base.json
 ```
 
 **Build VirtualBox**
 
 ```javascript
-$ packer build --only=virtualbox-iso ./packer/vagrant/base.json
+$ cd packer
+$ packer build --only=virtualbox-iso vagrant/base.json
 ```
 
 

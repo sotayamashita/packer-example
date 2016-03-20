@@ -1,13 +1,14 @@
 {
   "variables": {
-    "iso_checksum":      "d07ab3e615c66a8b2e9a50f4852e6a77",
+    "iso_checksum":      "88c0437f0a14c6e2c94426df9d43cd67",
     "iso_checksum_type": "md5",
-    "iso_name":          "CentOS-7-x86_64-Minimal-1503-01",
-    "iso_url":           "http://ftp.riken.jp/Linux/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1503-01.iso",
+    "iso_name":          "CentOS-7-x86_64-Minimal-1511",
+    "iso_url":           "http://ftp.riken.jp/Linux/centos/7/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
     "ssh_password":      "vagrant",
     "ssh_username":      "vagrant",
-    "update":            false,
-    "version":           "0.0.1"
+    "update":            "false",
+    "version":           "0.0.1",
+    "scripts_dir":       "scripts"
   },
   "builders": [
     {
@@ -55,12 +56,12 @@
         }
       },
       "scripts": [
-        "../../tmp/scripts/fix-slow-dns.sh",
-        "../../tmp/scripts/update.sh",
-        "../../tmp/scripts/base.sh",
-        "../../tmp/scripts/vagrant.sh",
-        "../../tmp/scripts/virtualbox.sh",
-        "../../tmp/scripts/clean.sh"
+        "{{user `scripts_dir`}}/fix-slow-dns.sh",
+        "{{user `scripts_dir`}}/update.sh",
+        "{{user `scripts_dir`}}/base.sh",
+        "{{user `scripts_dir`}}/vagrant.sh",
+        "{{user `scripts_dir`}}/virtualbox.sh",
+        "{{user `scripts_dir`}}/clean.sh"
       ],
       "type": "shell"
     }

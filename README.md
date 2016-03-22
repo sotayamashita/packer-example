@@ -18,7 +18,7 @@ This repository is typically for the purposes of internal testing and demonstrat
 
 ```javascript
 $ cd packer
-$ packer build --only= ./packer/aws/base.json
+$ packer build --only=amazon-ebs ./packer/aws/base.json
 ```
 
 **Build Docker**
